@@ -1,0 +1,208 @@
+\documentclass[letterpaper,11pt]{article}
+
+% Required for LuaLaTeX
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{luatex85}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue, filecolor=blue, pdfborder={1 1 1}, pdfborderstyle={/S/S/W 1 /C [0 0 1]}]{hyperref}
+
+
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.8in}
+\addtolength{\evensidemargin}{-0.8in}
+\addtolength{\textwidth}{1.6in}
+\addtolength{\topmargin}{-0.8in}
+\addtolength{\textheight}{1.3in}
+\addtolength{\footskip}{-10pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\bfseries\scshape\raggedright\large\color{ForestGreen}
+}{}{0em}{}[\color{ForestGreen}\titlerule \vspace{-5pt}\color{black}]
+
+\pdfgentounicode=1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\addtResumeProject}[2]{
+  \textbf{#1} \\
+  #2 \normalsize \vspace{2mm}
+}
+
+\renewcommand{\section}[1]{
+    {\color{ForestGreen}
+    \textbf{\large #1} \hspace{0.1em}\hrulefill
+    }
+}
+
+\newcommand{\resumeItem}[1]{
+  \item{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeCompanyHeading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \vspace{1.2mm}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeRoleHeading}[2]{
+  \vspace{-2pt}
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textit{#1} & \textit{#2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\namefont}{\fontsize{18pt}{18pt}\selectfont} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+    \namefont \textbf{\scshape Asher Siddiqui} \\ \vspace{2mm}
+    \small Karachi, Pakistan $|$
+    \small +92-3302463301 $|$ ashersiddiqui.work@gmail.com $|$ 
+    \small \href{https://github.com/pluuto19}{Github} $|$
+    \small \href{https://linkedin.com/in/ashersiddique}{LinkedIn}
+\end{center}
+
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeCompanyHeading
+      {Arclab Solutions}{Remote}
+
+       \resumeRoleHeading
+            {Junior Software Engineer $|$ TypeScript, React, Go, Kafka, SpiceDB, PostgreSQL, Redis}{July. 2025 -- Present}
+               \resumeItemListStart
+                 \resumeItem{Built an internal React dashboard for configuring and monitoring simulated ASIC miner fleets, consuming a Go WebSocket backend for real time fleet state.}
+                 
+                 \resumeItem{Architected an internal resource scoped authorization layer using SpiceDB, enabling secure multi-tenant access control across core platform APIs.}
+                 
+                 \resumeItem{Developed a FastAPI data export service for TimescaleDB metrics, enabling downstream reporting pipelines to consume structured time series data over a REST interface.}
+                 
+                 \resumeItem{Strengthened internal API security by rolling out mTLS service-to-service protection and a TLS-capable HTTP client, closing trust gaps between services.}
+                 
+                 \resumeItem{Secured event ingestion by adding Kafka SASL/SCRAM support and updating Docker Compose to provision secure broker users, improving production parity.}
+
+                 \resumeItem{Authored PostgreSQL/TimescaleDB migrations and performance indexes across multiple product domains.}
+        
+               \resumeItemListEnd
+
+    \resumeCompanyHeading
+      {TAFSOL Technologies}{Karachi, Pakistan (Hybrid)}
+      
+        \resumeRoleHeading
+            {TypeScript, React, Go, MySQL, WebSockets, Docker, AWS}{July. 2023 -- July. 2025}
+               \resumeItemListStart
+               
+                 \resumeItem{Built a full-stack real-time chat application with a React frontend and a Go/WebSocket backend; reduced message delivery latency from ~1.3s to ~0.4s via server-side LRU caching.}
+                                
+                \resumeItem{Optimized authentication flow through concurrent query processing and request batching, cutting response time from ~7s to ~1.5s.}
+                
+                 \resumeItem{Designed a custom RBAC middleware with per-route permission enforcement, integrated across REST endpoints and frontend route guards.}
+                 
+                 \resumeItem{Built a QR-based quick pay feature with a React UI and REST backend for internal payments, reducing transaction steps by 40\%.}
+                 
+                \resumeItemListEnd
+
+        \resumeCompanyHeading{Open Source Contributions}{}
+    
+        \resumeRoleHeading{Typescript, Node.js, PostgreSQL}{}
+        
+            \resumeItemListStart
+                \resumeItem{Refactored GitHub OAuth architecture to a database backed source of truth, eliminating fragmented token state, resulting\\in a cleaner data flow, and more readable codebase. (\href{https://github.com/jamesmurdza/background-agents/pull/61}{PR \#1}, \href{https://github.com/jamesmurdza/background-agents/pull/65}{PR \#2})}
+                \resumeItem{Designed a provider agnostic context system across Claude, Gemini, Codex, and OpenCode, reconstructing session state on provider switches and branch forks. (\href{https://github.com/jamesmurdza/background-agents/pull/53}{PR \#1}, \href{https://github.com/jamesmurdza/background-agents/pull/57}{PR \#2}, \href{https://github.com/jamesmurdza/background-agents/pull/60}{PR \#3})}
+                \resumeItem{Built an agentic skills lifecycle system, handling consistency across sandboxes, and global prompt injection to ensure skill awareness across all providers. (\href{https://github.com/jamesmurdza/background-agents/pull/79}{PR \#1}, \href{https://github.com/jamesmurdza/background-agents/pull/80}{PR \#2})}
+            \resumeItemListEnd
+                    
+    \resumeSubHeadingListEnd
+  
+
+\section{PROJECTS}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{FYP - DDoS Detection in Kubernetes using ML and DL} $|$ \emph{Kubernetes, Ansible, Prometheus, Falco, Go, Python} $|$ \href{https://github.com/pluuto19/ddos-detection-in-kubernetes-using-ml-and-dl}{\textbf{GitHub}}}{}
+          \resumeItemListStart
+            \resumeItem{Deployed a bare metal Kubernetes cluster and a botnet using Ansible to create simulated DDoS attack scenarios for\\training ML and DL models.}
+             \resumeItem{Developed a custom data collection pipeline with Falco and Node Exporter to collect system calls and resource metrics, ensuring centralized logging and data generation.}         
+            \resumeItem{Developed and deployed attack scripts to simulate and orchestrate attacks via a C2 server and botnet, enabling automated DDoS attacks.}
+          \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+  
+    \vspace{1.5mm}
+    
+\section{TECHNICAL SKILLS}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages:}{ TypeScript, JavaScript, Python, Go, SQL} \\
+    \textbf{Frontend:}{ React, Next.js, WebSockets} \\
+    \textbf{Backend:}{ Node.js, Express, FastAPI, Echo (Go), REST APIs} \\
+    \textbf{Databases:}{ PostgreSQL, MySQL, Redis, SpiceDB} \\
+    \textbf{Infrastructure:}{ Docker, Docker Compose, Kubernetes, AWS (EC2, S3), Linux, Kafka} \\
+  }}
+\end{itemize}
+
+\section{EDUCATION}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {FAST - National University of Computer and Emerging Sciences (NUCES)}{Karachi, Pakistan}
+    {Bachelor of Science in Software Engineering}{August 2021 -- June 2025}
+
+  \vspace{1.5mm} % Adjust spacing
+
+  \textbf{Awards \& Honors:} Dean's List of Honors (3.5+ GPA) in Fall 2023, Spring 2024, Fall 2024
+\resumeSubHeadingListEnd
+
+\vspace*{-10pt} 
+
+\end{document}
