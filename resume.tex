@@ -121,17 +121,19 @@
       {Arclab Solutions}{Remote}
 
        \resumeRoleHeading
-            {Junior Software Engineer $|$ TypeScript, React, Go, Kafka, SpiceDB, PostgreSQL, Redis}{July. 2025 -- Present}
+            {Junior Software Engineer $|$ Go, PostgreSQL, Redis, Kafka, Docker Compose, SpiceDB}{Sep. 2025 -- Present}
                \resumeItemListStart
-                 \resumeItem{Built an internal React dashboard for configuring and monitoring simulated ASIC miner fleets, consuming a Go WebSocket backend for real time fleet state.}
+                 \resumeItem{Engineered a service implementing the cgminer API, allowing simulation of arbitrarily large ASIC miner fleets, and decoupling E2E testing from production data.}
                  
                  \resumeItem{Architected an internal resource scoped authorization layer using SpiceDB, enabling secure multi-tenant access control across core platform APIs.}
                  
-                 \resumeItem{Developed a FastAPI data export service for TimescaleDB metrics, enabling downstream reporting pipelines to consume structured time series data over a REST interface.}
+                 \resumeItem{Engineered a secure automation token system with resource scoping and permission checks, preventing privilege escalation by integrations, and enabling external programmatic access.}
                  
                  \resumeItem{Strengthened internal API security by rolling out mTLS service-to-service protection and a TLS-capable HTTP client, closing trust gaps between services.}
                  
                  \resumeItem{Secured event ingestion by adding Kafka SASL/SCRAM support and updating Docker Compose to provision secure broker users, improving production parity.}
+
+                 \resumeItem{Deployed a Redis-backed rate limiter to enforce abuse protection consistently across instances.}
 
                  \resumeItem{Authored PostgreSQL/TimescaleDB migrations and performance indexes across multiple product domains.}
         
@@ -141,16 +143,16 @@
       {TAFSOL Technologies}{Karachi, Pakistan (Hybrid)}
       
         \resumeRoleHeading
-            {TypeScript, React, Go, MySQL, WebSockets, Docker, AWS}{July. 2023 -- July. 2025}
+            {Software Engineering Intern $|$ Go, MySQL, Docker Compose, AWS S3}{Mar. 2025 -- Aug. 2025}
                \resumeItemListStart
                
-                 \resumeItem{Built a full-stack real-time chat application with a React frontend and a Go/WebSocket backend; reduced message delivery latency from ~1.3s to ~0.4s via server-side LRU caching.}
-                                
-                \resumeItem{Optimized authentication flow through concurrent query processing and request batching, cutting response time from ~7s to ~1.5s.}
-                
-                 \resumeItem{Designed a custom RBAC middleware with per-route permission enforcement, integrated across REST endpoints and frontend route guards.}
+                 \resumeItem{Optimized authentication response through concurrent processing and query merging, resulting in a reduced response time from $\sim$7s to $\sim$1.5s and improved auth latency.}
                  
-                 \resumeItem{Built a QR-based quick pay feature with a React UI and REST backend for internal payments, reducing transaction steps by 40\%.}
+                 \resumeItem{Built a chat system using WebSockets, and reduced delivery time from $\sim$1.3s to $\sim$0.4s via LRU caching,\\resulting in reduced message latency.}
+                 
+                 \resumeItem{Designed and implemented a custom RBAC middleware with per-route permission enforcement, enabling flexible fine grained authorization across APIs.}
+                 
+                 \resumeItem{Developed quick pay feature using QR codes for internal network payments, reducing steps for transfers by 40\%.}
                  
                 \resumeItemListEnd
 
@@ -173,7 +175,7 @@
       {\textbf{FYP - DDoS Detection in Kubernetes using ML and DL} $|$ \emph{Kubernetes, Ansible, Prometheus, Falco, Go, Python} $|$ \href{https://github.com/pluuto19/ddos-detection-in-kubernetes-using-ml-and-dl}{\textbf{GitHub}}}{}
           \resumeItemListStart
             \resumeItem{Deployed a bare metal Kubernetes cluster and a botnet using Ansible to create simulated DDoS attack scenarios for\\training ML and DL models.}
-             \resumeItem{Developed a custom data collection pipeline with Falco and Node Exporter to collect system calls and resource metrics, ensuring centralized logging and data generation.}         
+             \resumeItem{Developed a custom data collection pipeline with Falco and Node Exporter to collect system calls and resource metrics, ensuring centralized log collection and data generation.}         
             \resumeItem{Developed and deployed attack scripts to simulate and orchestrate attacks via a C2 server and botnet, enabling automated DDoS attacks.}
           \resumeItemListEnd
     
@@ -184,9 +186,9 @@
 \section{TECHNICAL SKILLS}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-    \textbf{Languages:}{ TypeScript, JavaScript, Python, Go, SQL} \\
-    \textbf{Frontend:}{ React, Next.js, WebSockets} \\
-    \textbf{Backend:}{ Node.js, Express, FastAPI, Echo (Go), REST APIs} \\
+    \textbf{Languages:}{ TypeScript, JavaScript, Python, Go} \\
+    \textbf{Frontend:}{ React, Next.js} \\
+    \textbf{Backend:}{ Node.js, Echo (Go)} \\
     \textbf{Databases:}{ PostgreSQL, MySQL, Redis, SpiceDB} \\
     \textbf{Infrastructure:}{ Docker, Docker Compose, Kubernetes, AWS (EC2, S3), Linux, Kafka} \\
   }}
@@ -200,7 +202,7 @@
 
   \vspace{1.5mm} % Adjust spacing
 
-  \textbf{Awards \& Honors:} Dean's List of Honors (3.5+ GPA) in Fall 2023, Spring 2024, Fall 2024
+  \textbf{Awards \& Honors:} Dean's List of Honors (3.5 GPA +) in Fall 2023, Spring 2024, Fall 2024
 \resumeSubHeadingListEnd
 
 \vspace*{-10pt} 
