@@ -118,25 +118,24 @@
   \resumeSubHeadingListStart
 
     \resumeCompanyHeading
-      {Arclab Solutions}{Remote}
+      {Arclab Solutions}{Sheridan, Wyoming, United States (Remote)}
 
        \resumeRoleHeading
             {Junior Software Engineer $|$ Go, PostgreSQL, Redis, Kafka, Docker Compose, SpiceDB}{Sep. 2025 -- Present}
                \resumeItemListStart
-                 \resumeItem{Engineered a service implementing the cgminer API, allowing simulation of arbitrarily large ASIC miner fleets, and decoupling E2E testing from production data.}
-                 
-                 \resumeItem{Architected an internal resource scoped authorization layer using SpiceDB, enabling secure multi-tenant access control across core platform APIs.}
-                 
-                 \resumeItem{Engineered a secure automation token system with resource scoping and permission checks, preventing privilege escalation by integrations, and enabling external programmatic access.}
-                 
-                 \resumeItem{Strengthened internal API security by rolling out mTLS service-to-service protection and a TLS-capable HTTP client, closing trust gaps between services.}
-                 
-                 \resumeItem{Secured event ingestion by adding Kafka SASL/SCRAM support and updating Docker Compose to provision secure broker users, improving production parity.}
 
-                 \resumeItem{Deployed a Redis-backed rate limiter to enforce abuse protection consistently across instances.}
+                 \resumeItem{Designed a cryptographically signed over the air update system for remote agents, replacing container registry usage and enabling fleet wide updates without on site intervention.}
 
-                 \resumeItem{Authored PostgreSQL/TimescaleDB migrations and performance indexes across multiple product domains.}
-        
+                 \resumeItem{Architected a resource scoped authorization layer on SpiceDB, so every customer's data stays isolated and access is\\enforced consistently across all platform APIs.}
+
+                 \resumeItem{Hardened inter service communication with mTLS, an internal certificate authority and per agent certificate binding,\\ensuring a compromised remote agent cannot assume another agent's identity.}
+
+                 \resumeItem{Built fleet monitoring on TimescaleDB, combining device health, performance, and power analytics to give operators a prioritized view of fleet statistics.}
+
+                 \resumeItem{Built the release and deployment pipeline for the remote agent, covering signing keys, build stamping, certificate provisioning and automated publishing, making production deployments repeatable and every release traceable.}
+
+                 \resumeItem{Engineered a fleet simulation service that replicates large scale hardware through its native API, decoupling E2E testing from production data, letting teams test at any scale.}
+
                \resumeItemListEnd
 
     \resumeCompanyHeading
@@ -146,13 +145,9 @@
             {Software Engineering Intern $|$ Go, MySQL, Docker Compose, AWS S3}{Mar. 2025 -- Aug. 2025}
                \resumeItemListStart
                
-                 \resumeItem{Optimized authentication response through concurrent processing and query merging, resulting in a reduced response time from $\sim$7s to $\sim$1.5s and improved auth latency.}
+                 \resumeItem{Optimized the authentication flow with concurrent processing and query merging, cutting response time by $\sim$79\% (from $\sim$7s to $\sim$1.5s).}
                  
-                 \resumeItem{Built a chat system using WebSockets, and reduced delivery time from $\sim$1.3s to $\sim$0.4s via LRU caching,\\resulting in reduced message latency.}
-                 
-                 \resumeItem{Designed and implemented a custom RBAC middleware with per-route permission enforcement, enabling flexible fine grained authorization across APIs.}
-                 
-                 \resumeItem{Developed quick pay feature using QR codes for internal network payments, reducing steps for transfers by 40\%.}
+                 \resumeItem{Built a real time chat system on WebSockets and cut message delivery latency by $\sim$70\% (from $\sim$1.3s to $\sim$0.4s) through server side LRU caching.}
                  
                 \resumeItemListEnd
 
@@ -174,9 +169,7 @@
     \resumeProjectHeading
       {\textbf{FYP - DDoS Detection in Kubernetes using ML and DL} $|$ \emph{Kubernetes, Ansible, Prometheus, Falco, Go, Python} $|$ \href{https://github.com/pluuto19/ddos-detection-in-kubernetes-using-ml-and-dl}{\textbf{GitHub}}}{}
           \resumeItemListStart
-            \resumeItem{Deployed a bare metal Kubernetes cluster and a botnet using Ansible to create simulated DDoS attack scenarios for\\training ML and DL models.}
-             \resumeItem{Developed a custom data collection pipeline with Falco and Node Exporter to collect system calls and resource metrics, ensuring centralized log collection and data generation.}         
-            \resumeItem{Developed and deployed attack scripts to simulate and orchestrate attacks via a C2 server and botnet, enabling automated DDoS attacks.}
+            \resumeItem{Built a bare metal Kubernetes cluster with Ansible and attacked it from a botnet controlled by a C2 server, collecting\\system calls and telemetry with Falco and Node Exporter to train ML and DL models that detect DDoS attacks.}
           \resumeItemListEnd
     
   \resumeSubHeadingListEnd
