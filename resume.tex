@@ -110,7 +110,7 @@
     \namefont \textbf{\scshape Asher Siddiqui} \\ \vspace{2mm}
     \small Karachi, Pakistan $|$
     \small +92-3302463301 $|$ ashersiddiqui.work@gmail.com $|$ 
-    \small \href{https://github.com/pluuto19}{Github} $|$
+    \small \href{https://github.com/pluuto19}{GitHub} $|$
     \small \href{https://linkedin.com/in/ashersiddique}{LinkedIn}
 \end{center}
 
@@ -118,23 +118,23 @@
   \resumeSubHeadingListStart
 
     \resumeCompanyHeading
-      {Arclab Solutions}{Sheridan, Wyoming, United States (Remote)}
+      {Arclab Solutions}{Sheridan, WY, USA (Remote)}
 
        \resumeRoleHeading
-            {Junior Software Engineer $|$ Go, PostgreSQL, Redis, Kafka, Docker Compose, SpiceDB}{Sep. 2025 -- Present}
+            {Junior Software Engineer $|$ Go, PostgreSQL, TimescaleDB, Redis, Kafka, Docker Compose, SpiceDB}{Sep. 2025 -- Present}
                \resumeItemListStart
 
-                 \resumeItem{Designed a cryptographically signed over the air update system for remote agents, replacing container registry usage and enabling fleet wide updates without on site intervention.}
+                 \resumeItem{Designed a cryptographically signed over-the-air update system for remote agents, replacing container registry pulls and enabling fleet-wide updates without on-site intervention.}
 
-                 \resumeItem{Architected a resource scoped authorization layer on SpiceDB, so every customer's data stays isolated and access is\\enforced consistently across all platform APIs.}
+                 \resumeItem{Architected a resource-scoped authorization layer on SpiceDB, so every customer's data stays isolated and access is\\enforced consistently across all platform APIs.}
 
-                 \resumeItem{Hardened inter service communication with mTLS, an internal certificate authority and per agent certificate binding,\\ensuring a compromised remote agent cannot assume another agent's identity.}
+                 \resumeItem{Hardened inter-service communication with mTLS, an internal certificate authority, and per-agent certificate binding,\\ensuring a compromised remote agent cannot assume another agent's identity.}
 
-                 \resumeItem{Built fleet monitoring on TimescaleDB, combining device health, performance, and power analytics to give operators a prioritized view of fleet statistics.}
+                 \resumeItem{Built fleet monitoring on TimescaleDB, combining device health, performance, and power analytics to give operators a prioritized view of fleet health.}
 
-                 \resumeItem{Built the release and deployment pipeline for the remote agent, covering signing keys, build stamping, certificate provisioning and automated publishing, making production deployments repeatable and every release traceable.}
+                 \resumeItem{Built the release and deployment pipeline for the remote agent, covering signing keys, build stamping, certificate provisioning, and automated publishing, making production deployments repeatable and every release traceable.}
 
-                 \resumeItem{Engineered a fleet simulation service that replicates large scale hardware through its native API, decoupling E2E testing from production data, letting teams test at any scale.}
+                 \resumeItem{Engineered a fleet simulation service that replicates large-scale hardware through its native API, decoupling end-to-end testing from production data and letting teams test at any scale.}
 
                \resumeItemListEnd
 
@@ -147,18 +147,18 @@
                
                  \resumeItem{Optimized the authentication flow with concurrent processing and query merging, cutting response time by $\sim$79\% (from $\sim$7s to $\sim$1.5s).}
                  
-                 \resumeItem{Built a real time chat system on WebSockets and cut message delivery latency by $\sim$70\% (from $\sim$1.3s to $\sim$0.4s) through server side LRU caching.}
+                 \resumeItem{Built a real-time chat system on WebSockets and cut message delivery latency by $\sim$70\% (from $\sim$1.3s to $\sim$0.4s) through server-side LRU caching.}
                  
                 \resumeItemListEnd
 
         \resumeCompanyHeading{Open Source Contributions}{}
     
-        \resumeRoleHeading{Typescript, Node.js, PostgreSQL}{}
+        \resumeRoleHeading{TypeScript, Node.js, PostgreSQL}{}
         
             \resumeItemListStart
-                \resumeItem{Refactored GitHub OAuth architecture to a database backed source of truth, eliminating fragmented token state, resulting\\in a cleaner data flow, and more readable codebase. (\href{https://github.com/jamesmurdza/background-agents/pull/61}{PR \#1}, \href{https://github.com/jamesmurdza/background-agents/pull/65}{PR \#2})}
-                \resumeItem{Designed a provider agnostic context system across Claude, Gemini, Codex, and OpenCode, reconstructing session state on provider switches and branch forks. (\href{https://github.com/jamesmurdza/background-agents/pull/53}{PR \#1}, \href{https://github.com/jamesmurdza/background-agents/pull/57}{PR \#2}, \href{https://github.com/jamesmurdza/background-agents/pull/60}{PR \#3})}
-                \resumeItem{Built an agentic skills lifecycle system, handling consistency across sandboxes, and global prompt injection to ensure skill awareness across all providers. (\href{https://github.com/jamesmurdza/background-agents/pull/79}{PR \#1}, \href{https://github.com/jamesmurdza/background-agents/pull/80}{PR \#2})}
+                \resumeItem{Refactored GitHub OAuth architecture to a database-backed source of truth, eliminating fragmented token state and resulting\\in a cleaner data flow and a more readable codebase. (\href{https://github.com/jamesmurdza/background-agents/pull/61}{PR \#1}, \href{https://github.com/jamesmurdza/background-agents/pull/65}{PR \#2})}
+                \resumeItem{Designed a provider-agnostic context system across Claude, Gemini, Codex, and OpenCode, reconstructing session state on provider switches and branch forks. (\href{https://github.com/jamesmurdza/background-agents/pull/53}{PR \#1}, \href{https://github.com/jamesmurdza/background-agents/pull/57}{PR \#2}, \href{https://github.com/jamesmurdza/background-agents/pull/60}{PR \#3})}
+                \resumeItem{Built an agentic skills lifecycle system, handling consistency across sandboxes and injecting a global prompt so every provider is aware of available skills. (\href{https://github.com/jamesmurdza/background-agents/pull/79}{PR \#1}, \href{https://github.com/jamesmurdza/background-agents/pull/80}{PR \#2})}
             \resumeItemListEnd
                     
     \resumeSubHeadingListEnd
@@ -167,9 +167,9 @@
 \section{PROJECTS}
   \resumeSubHeadingListStart
     \resumeProjectHeading
-      {\textbf{FYP - DDoS Detection in Kubernetes using ML and DL} $|$ \emph{Kubernetes, Ansible, Prometheus, Falco, Go, Python} $|$ \href{https://github.com/pluuto19/ddos-detection-in-kubernetes-using-ml-and-dl}{\textbf{GitHub}}}{}
+      {\textbf{FYP: DDoS Detection in Kubernetes using ML and DL} $|$ \emph{Kubernetes, Ansible, Prometheus, Falco, Go, Python} $|$ \href{https://github.com/pluuto19/ddos-detection-in-kubernetes-using-ml-and-dl}{\textbf{GitHub}}}{}
           \resumeItemListStart
-            \resumeItem{Built a bare metal Kubernetes cluster with Ansible and attacked it from a botnet controlled by a C2 server, collecting\\system calls and telemetry with Falco and Node Exporter to train ML and DL models that detect DDoS attacks.}
+            \resumeItem{Built a bare-metal Kubernetes cluster with Ansible and simulated DDoS attacks against it from a botnet, collecting system calls and resource metrics with Falco and Node Exporter to train ML and DL models that detect them.}
           \resumeItemListEnd
     
   \resumeSubHeadingListEnd
@@ -182,7 +182,7 @@
     \textbf{Languages:}{ TypeScript, JavaScript, Python, Go} \\
     \textbf{Frontend:}{ React, Next.js} \\
     \textbf{Backend:}{ Node.js, Echo (Go)} \\
-    \textbf{Databases:}{ PostgreSQL, MySQL, Redis, SpiceDB} \\
+    \textbf{Databases:}{ PostgreSQL, TimescaleDB, MySQL, Redis, SpiceDB} \\
     \textbf{Infrastructure:}{ Docker, Docker Compose, Kubernetes, AWS (EC2, S3), Linux, Kafka} \\
   }}
 \end{itemize}
@@ -190,12 +190,12 @@
 \section{EDUCATION}
 \resumeSubHeadingListStart
   \resumeSubheading
-    {FAST - National University of Computer and Emerging Sciences (NUCES)}{Karachi, Pakistan}
-    {Bachelor of Science in Software Engineering}{August 2021 -- June 2025}
+    {FAST -- National University of Computer and Emerging Sciences (NUCES)}{Karachi, Pakistan}
+    {Bachelor of Science in Software Engineering}{Aug. 2021 -- June 2025}
 
   \vspace{1.5mm} % Adjust spacing
 
-  \textbf{Awards \& Honors:} Dean's List of Honors (3.5 GPA +) in Fall 2023, Spring 2024, Fall 2024
+  \textbf{Awards \& Honors:} Dean's List of Honors (3.5+ GPA) in Fall 2023, Spring 2024, and Fall 2024
 \resumeSubHeadingListEnd
 
 \vspace*{-10pt} 
