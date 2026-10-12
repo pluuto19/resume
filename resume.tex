@@ -109,7 +109,7 @@
 \begin{center}
     \namefont \textbf{\scshape Asher Siddiqui} \\ \vspace{2mm}
     \small Karachi, Pakistan $|$
-    \small +92-3302463301 $|$ ashersiddiqui.work@gmail.com $|$ 
+    \small +92 330 2463301 $|$ ashersiddiqui.work@gmail.com $|$ 
     \small \href{https://github.com/pluuto19}{GitHub} $|$
     \small \href{https://linkedin.com/in/ashersiddique}{LinkedIn}
 \end{center}
@@ -126,15 +126,30 @@
 
                  \resumeItem{Designed a cryptographically signed over-the-air update system for remote agents, replacing container registry pulls and enabling fleet-wide updates without on-site intervention.}
 
+                 \resumeItem{Built fleet monitoring on TimescaleDB, ingesting tens of gigabytes of telemetry a day from $\sim$10,000 devices while keeping API latency under 50 ms on endpoints that return fleet-wide data.}
+
                  \resumeItem{Architected a resource-scoped authorization layer on SpiceDB, so every customer's data stays isolated and access is\\enforced consistently across all platform APIs.}
 
                  \resumeItem{Hardened inter-service communication with mTLS, an internal certificate authority, and per-agent certificate binding,\\ensuring a compromised remote agent cannot assume another agent's identity.}
 
-                 \resumeItem{Built fleet monitoring on TimescaleDB, combining device health, performance, and power analytics to give operators a prioritized view of fleet health.}
-
                  \resumeItem{Built the release and deployment pipeline for the remote agent, covering signing keys, build stamping, certificate provisioning, and automated publishing, making production deployments repeatable and every release traceable.}
 
                  \resumeItem{Engineered a fleet simulation service that replicates large-scale hardware through its native API, decoupling end-to-end testing from production data and letting teams test at any scale.}
+
+               \resumeItemListEnd
+
+    \resumeCompanyHeading
+      {Noah Labs}{Palo Alto, CA, USA (Remote)}
+
+       \resumeRoleHeading
+            {Software Engineer $|$ Python, FastAPI, TypeScript}{June 2026 -- Aug. 2026}
+               \resumeItemListStart
+
+                 \resumeItem{Redesigned how agent changes are merged back into a user's repository, using the Git object database to resolve conflicts\\on separate branches so uncommitted work is never overwritten or lost.}
+
+                 \resumeItem{Isolated multi-workspace state in the agent daemon, resolving multiple bugs where agents answered from the wrong workspace.}
+
+                 \resumeItem{Resolved a privileged installer defect that left installed tools unreachable by normal users, applying permissions through\\file descriptors and restricting changes to installer-owned paths.}
 
                \resumeItemListEnd
 
@@ -145,7 +160,7 @@
             {Software Engineering Intern $|$ Go, MySQL, Docker Compose, AWS S3}{Mar. 2025 -- Aug. 2025}
                \resumeItemListStart
                
-                 \resumeItem{Optimized the authentication flow with concurrent processing and query merging, cutting response time by $\sim$79\% (from $\sim$7s to $\sim$1.5s).}
+                 \resumeItem{Optimized the authentication flow with concurrent processing and query merging, cutting response time by $\sim$79\% (from\\$\sim$7s to $\sim$1.5s).}
                  
                  \resumeItem{Built a real-time chat system on WebSockets and cut message delivery latency by $\sim$70\% (from $\sim$1.3s to $\sim$0.4s) through server-side LRU caching.}
                  
@@ -156,9 +171,7 @@
         \resumeRoleHeading{TypeScript, Node.js, PostgreSQL}{}
         
             \resumeItemListStart
-                \resumeItem{Refactored GitHub OAuth architecture to a database-backed source of truth, eliminating fragmented token state and resulting\\in a cleaner data flow and a more readable codebase. (\href{https://github.com/jamesmurdza/background-agents/pull/61}{PR \#1}, \href{https://github.com/jamesmurdza/background-agents/pull/65}{PR \#2})}
-                \resumeItem{Designed a provider-agnostic context system across Claude, Gemini, Codex, and OpenCode, reconstructing session state on provider switches and branch forks. (\href{https://github.com/jamesmurdza/background-agents/pull/53}{PR \#1}, \href{https://github.com/jamesmurdza/background-agents/pull/57}{PR \#2}, \href{https://github.com/jamesmurdza/background-agents/pull/60}{PR \#3})}
-                \resumeItem{Built an agentic skills lifecycle system, handling consistency across sandboxes and injecting a global prompt so every provider is aware of available skills. (\href{https://github.com/jamesmurdza/background-agents/pull/79}{PR \#1}, \href{https://github.com/jamesmurdza/background-agents/pull/80}{PR \#2})}
+                \resumeItem{Contributed a database-backed GitHub OAuth refactor (\href{https://github.com/jamesmurdza/background-agents/pull/61}{PR \#1}, \href{https://github.com/jamesmurdza/background-agents/pull/65}{PR \#2}), a provider-agnostic context system across Claude, Gemini, Codex, and OpenCode (\href{https://github.com/jamesmurdza/background-agents/pull/53}{PR \#1}, \href{https://github.com/jamesmurdza/background-agents/pull/57}{PR \#2}, \href{https://github.com/jamesmurdza/background-agents/pull/60}{PR \#3}), and an agent skills lifecycle (\href{https://github.com/jamesmurdza/background-agents/pull/79}{PR \#1}, \href{https://github.com/jamesmurdza/background-agents/pull/80}{PR \#2}) to upstream-agents, an open-source cloud coding-agent platform.}
             \resumeItemListEnd
                     
     \resumeSubHeadingListEnd
@@ -179,9 +192,9 @@
 \section{TECHNICAL SKILLS}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-    \textbf{Languages:}{ TypeScript, JavaScript, Python, Go} \\
+    \textbf{Languages:}{ Go, Python, TypeScript, JavaScript} \\
     \textbf{Frontend:}{ React, Next.js} \\
-    \textbf{Backend:}{ Node.js, Echo (Go)} \\
+    \textbf{Backend:}{ Node.js, FastAPI, Echo (Go)} \\
     \textbf{Databases:}{ PostgreSQL, TimescaleDB, MySQL, Redis, SpiceDB} \\
     \textbf{Infrastructure:}{ Docker, Docker Compose, Kubernetes, AWS (EC2, S3), Linux, Kafka} \\
   }}
