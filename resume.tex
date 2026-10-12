@@ -109,13 +109,32 @@
 \begin{center}
     \namefont \textbf{\scshape Asher Siddiqui} \\ \vspace{2mm}
     \small Karachi, Pakistan $|$
-    \small +92-3302463301 $|$ ashersiddiqui.work@gmail.com $|$ 
+    \small +92 330 2463301 $|$ ashersiddiqui.work@gmail.com $|$ 
     \small \href{https://github.com/pluuto19}{GitHub} $|$
     \small \href{https://linkedin.com/in/ashersiddique}{LinkedIn}
 \end{center}
 
 \section{EXPERIENCE}
   \resumeSubHeadingListStart
+
+    \resumeCompanyHeading
+      {Noah Labs}{Palo Alto, CA, USA (Remote)}
+
+       \resumeRoleHeading
+            {Software Engineer $|$ Python, FastAPI, TypeScript}{June 2026 -- Aug. 2026}
+               \resumeItemListStart
+
+                 \resumeItem{Eliminated false passes in agent verification, where a failed verifier agent was recorded as a success, by requiring explicit approval before any unreviewed change could be applied.}
+
+                 \resumeItem{Introduced typed outcomes across the agent tool-result contract, ensuring failed and partial tool calls reach the model as failures rather than as output it could mistake for success.}
+
+                 \resumeItem{Capped runaway token spend in the agent loop by fixing an accounting flaw that counted failed edits as progress and\\granted unlimited budget extensions.}
+
+                 \resumeItem{Redesigned how agent changes are merged back into a user's repository, using the Git object database to resolve conflicts\\on separate branches so uncommitted work is never overwritten or lost.}
+
+                 \resumeItem{Enforced least privilege across agent tool call surface, removing file-write and terminal access from read-only agents\\that had inherited the implementation role's tools through faulty role resolution.}
+
+               \resumeItemListEnd
 
     \resumeCompanyHeading
       {Arclab Solutions}{Sheridan, WY, USA (Remote)}
@@ -130,12 +149,6 @@
 
                  \resumeItem{Hardened inter-service communication with mTLS, an internal certificate authority, and per-agent certificate binding,\\ensuring a compromised remote agent cannot assume another agent's identity.}
 
-                 \resumeItem{Built fleet monitoring on TimescaleDB, combining device health, performance, and power analytics to give operators a prioritized view of fleet health.}
-
-                 \resumeItem{Built the release and deployment pipeline for the remote agent, covering signing keys, build stamping, certificate provisioning, and automated publishing, making production deployments repeatable and every release traceable.}
-
-                 \resumeItem{Engineered a fleet simulation service that replicates large-scale hardware through its native API, decoupling end-to-end testing from production data and letting teams test at any scale.}
-
                \resumeItemListEnd
 
     \resumeCompanyHeading
@@ -145,7 +158,7 @@
             {Software Engineering Intern $|$ Go, MySQL, Docker Compose, AWS S3}{Mar. 2025 -- Aug. 2025}
                \resumeItemListStart
                
-                 \resumeItem{Optimized the authentication flow with concurrent processing and query merging, cutting response time by $\sim$79\% (from $\sim$7s to $\sim$1.5s).}
+                 \resumeItem{Optimized the authentication flow with concurrent processing and query merging, cutting response time by $\sim$79\% (from\\$\sim$7s to $\sim$1.5s).}
                  
                  \resumeItem{Built a real-time chat system on WebSockets and cut message delivery latency by $\sim$70\% (from $\sim$1.3s to $\sim$0.4s) through server-side LRU caching.}
                  
@@ -156,8 +169,8 @@
         \resumeRoleHeading{TypeScript, Node.js, PostgreSQL}{}
         
             \resumeItemListStart
-                \resumeItem{Refactored GitHub OAuth architecture to a database-backed source of truth, eliminating fragmented token state and resulting\\in a cleaner data flow and a more readable codebase. (\href{https://github.com/jamesmurdza/background-agents/pull/61}{PR \#1}, \href{https://github.com/jamesmurdza/background-agents/pull/65}{PR \#2})}
-                \resumeItem{Designed a provider-agnostic context system across Claude, Gemini, Codex, and OpenCode, reconstructing session state on provider switches and branch forks. (\href{https://github.com/jamesmurdza/background-agents/pull/53}{PR \#1}, \href{https://github.com/jamesmurdza/background-agents/pull/57}{PR \#2}, \href{https://github.com/jamesmurdza/background-agents/pull/60}{PR \#3})}
+                \resumeItem{Refactored GitHub OAuth architecture to a database-backed source of truth, eliminating fragmented token state.\\(\href{https://github.com/jamesmurdza/background-agents/pull/61}{PR \#1}, \href{https://github.com/jamesmurdza/background-agents/pull/65}{PR \#2})}
+                \resumeItem{Designed a provider-agnostic context system across Claude, Gemini, Codex, and OpenCode, reconstructing session state\\on provider switches and branch forks. (\href{https://github.com/jamesmurdza/background-agents/pull/53}{PR \#1}, \href{https://github.com/jamesmurdza/background-agents/pull/57}{PR \#2}, \href{https://github.com/jamesmurdza/background-agents/pull/60}{PR \#3})}
                 \resumeItem{Built an agentic skills lifecycle system, handling consistency across sandboxes and injecting a global prompt so every provider is aware of available skills. (\href{https://github.com/jamesmurdza/background-agents/pull/79}{PR \#1}, \href{https://github.com/jamesmurdza/background-agents/pull/80}{PR \#2})}
             \resumeItemListEnd
                     
@@ -179,9 +192,9 @@
 \section{TECHNICAL SKILLS}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-    \textbf{Languages:}{ TypeScript, JavaScript, Python, Go} \\
+    \textbf{Languages:}{ Python, TypeScript, JavaScript, Go} \\
     \textbf{Frontend:}{ React, Next.js} \\
-    \textbf{Backend:}{ Node.js, Echo (Go)} \\
+    \textbf{Backend:}{ Node.js, FastAPI, Echo (Go)} \\
     \textbf{Databases:}{ PostgreSQL, TimescaleDB, MySQL, Redis, SpiceDB} \\
     \textbf{Infrastructure:}{ Docker, Docker Compose, Kubernetes, AWS (EC2, S3), Linux, Kafka} \\
   }}
